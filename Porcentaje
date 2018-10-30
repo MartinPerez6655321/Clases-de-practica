@@ -1,0 +1,63 @@
+import java.util.Scanner; //Importación del código de la clase Scanner desde la biblioteca Java
+
+//Código para el cálculo de asistencia
+
+public class Porcentaje {
+    public static void main (String [ ] args) {
+	  System.out.println('\n' + "Bienvenido al programa para sacar porcentajes" + '\n' + "Puede elegir entre calcular que porcentaje de algo es un valor");
+	  System.out.println("O cuanto de algo es tal porcentaje");
+		System.out.println("Indique si quiere la opcion 1, colocando un 1, o la opcion 2, colocando un 2:");
+		String entradaT = "";
+	
+        Scanner entradaE = new Scanner (System.in); //Creación de un objeto Scanner
+
+        entradaT = entradaE.nextLine (); //Invocamos un método sobre un objeto Scanner
+		    int opcion = Integer.parseInt(entradaT);
+		if(opcion==1){
+			System.out.println('\n' + "Ingrese que numero quiere saber que porcentaje de otro numero es: ");
+			System.out.println("Que porcentaje es: ");
+			String entradaTeclado = "";
+	
+			Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
+
+			entradaTeclado = entradaEscaner.nextLine (); //Invocamos un método sobre un objeto Scanner
+			System.out.println('\n' + "de : ");
+			String entradaTeclado2 = "";
+	
+			Scanner entradaEscaner2 = new Scanner (System.in); //Creación de un objeto Scanner
+
+			entradaTeclado2 = entradaEscaner2.nextLine (); //Invocamos un método sobre un objeto Scanner
+	
+			int num1 = Integer.parseInt(entradaTeclado);
+			int num2 = Integer.parseInt(entradaTeclado2);
+			float num3 = (float)(num1*100)/num2;
+			System.out.println('\n' + "? Es : "+ num3);
+		}
+	
+	else{
+		if(opcion==2){
+		System.out.println('\n' + "Ingrese el porcentaje del que quiere saber cuanto es: ");
+			System.out.println("Cuanto es el: ");
+			String entradaTeclado = "";
+	
+			Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
+
+			entradaTeclado = entradaEscaner.nextLine (); //Invocamos un método sobre un objeto Scanner
+			System.out.println('\n' + "% de: ");
+			String entradaTeclado2 = "";
+	
+			Scanner entradaEscaner2 = new Scanner (System.in); //Creación de un objeto Scanner
+
+			entradaTeclado2 = entradaEscaner2.nextLine (); //Invocamos un método sobre un objeto Scanner
+	
+			float num1 = Float.parseFloat(entradaTeclado);
+			float num2 = Float.parseFloat(entradaTeclado2);
+			float num3 = (float) num2*(num1/100);
+			System.out.println('\n' + "? Es: "+ num3);
+		}
+	else{
+		System.out.println("No ha ingresado una opcion valida");
+  	}
+  }
+}
+} 
